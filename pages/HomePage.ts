@@ -4,7 +4,7 @@ class HomePage{
     menu: string;
     logout: string;
 
-    constructor(page){
+    constructor(page: any){
         this.page = page;
         this.menu = "//img[@alt='menu']";
         this.logout = "//button[contains(.,'Sign out')]";

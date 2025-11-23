@@ -1,4 +1,3 @@
-
 class LoginPage {
     page: any;
     userName: string;
