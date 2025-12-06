@@ -1,5 +1,10 @@
 import { test, expect } from '@playwright/test';
+//expect use for validations
 
+//property/css/xpaths
+
+
+//page is fixture.
 test('Locators', async({page})=>{
     await page.goto('https://www.saucedemo.com/');
 
@@ -14,6 +19,11 @@ test('Locators', async({page})=>{
     await page.click("//input[@id='login-button']");
 
     //check the page is redirected
-    await page.goto('https://www.saucedemo.com/inventory.html');
+    const loginpage = await page.goto('https://www.saucedemo.com/inventory.html');
+
+    //use assertion
+    //const loginLink = expect(loginpage).toBeVisible();
+
+    await page.close();
 
 })
