@@ -12,6 +12,8 @@ test.skip('GET endpoint', async({request})=>{
   const text = await response.text();
   console.log(JSON.parse(text));
   const responseObject: ResponseData = JSON.parse(text);
+
+  //why use "?" => Only access the next property if the previous part is not null or undefined.
   const name = responseObject?.data.first_name;
   expect(name).toContain("Janet");
 
